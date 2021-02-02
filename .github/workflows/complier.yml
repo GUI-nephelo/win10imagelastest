@@ -31,7 +31,7 @@ jobs:
         run: powershell Expand-Archive -Path .\21301.1010_arm64_zh-cn_professional_73174e9e_convert_virtual.zip -Destination ./
       
       - name: 下载
-        run: uup_download_windows.cmd
+        run: .\uup_download_windows.cmd
       
       - name: Run a one-line script
         run: echo Hello, world!
