@@ -24,6 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # Runs a single command using the runners shell
+      
+      - uses: actions/checkout@v2
+      
       - name: 解压
         run: powershell Expand-Archive -Path .\21301.1010_arm64_zh-cn_professional_73174e9e_convert_virtual.zip -Destination ./
       
