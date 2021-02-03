@@ -46,13 +46,13 @@ jobs:
           mkdir latest
           mv *.ISO ./latest/Windows10-Dev-latest.ISO
           cd ./latest
-          tar -czvf Windows10-Insider-latest-ISO.tar.gz Windows10-Dev-latest.ISO
+          tar -Jcvf Windows10-Insider-latest-ISO.tar.xz Windows10-Dev-latest.ISO
       
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
           name: windows10-msater
-          path: ./latest/Windows10-Insider-latest-ISO.tar.gz
+          path: ./latest/Windows10-Insider-latest-ISO.tar.xz
 
       - name: cd
         run: |
@@ -66,7 +66,7 @@ jobs:
             code: latest
             prerelease: true
             assets: >
-                    Windows10-Insider-latest-ISO.tar.gz:Windows10-Insider-latest-ISO.tar.gz:
+                    Windows10-Insider-latest-ISO.tar.gz:Windows10-Insider-latest-ISO.tar.xz:
                     Windows10-Dev-latest.ISO:Windows10-Dev-latest.ISO:
                     
       
